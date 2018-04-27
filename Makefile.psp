@@ -1,0 +1,32 @@
+TARGET = pepv09
+OBJS = main.o label.o container.o guielement.o stackpanel.o listbox.o combobox.o listboxcombo.o window.o guistart.o guiimages.o filebrowser.o guisettings.o fileobject.o listboxfilebrowser.o imageloader.o stuff.o config.o imageviewer.o guibookmarks.o listboxcombobookmarks.o guiosdimage.o labeldesigned.o
+INCDIR = 
+
+CFLAGS = -O6 -G0 -Wall
+CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti 
+ASFLAGS = $(CFLAGS)
+
+LIBDIR =
+LDFLAGS =
+
+EXTRA_TARGETS = EBOOT.PBP kxploit
+EXTRA_CLEAN = my-clean
+
+PSP_EBOOT_TITLE = PeP-Viewer 0.9 alpha
+PSP_DIR_NAME = pepv09
+#PSP_EBOOT_ICON = ./graphics/icon.png
+#PSP_EBOOT_PIC1 = ./graphics/background.png
+
+
+PSPSDK=$(shell psp-config --pspsdk-path)
+PSPBIN = $(PSPSDK)/../bin
+CFLAGS += -I/usr/local/include/SDLx -Dmain=SDL_main
+CFLAGS += `$(PSPBIN)/sdl-config --cflags`
+LIBS += -lmad -lSDL_mixer -lSDL_image -lSDL_gfx -lSGE -lpng -lz  -ljpeg -lm `$(PSPBIN)/sdl-config --libs` -lSDL_ttf -lfreetype -lstdc++ -lpspaudiolib  -lpspaudio -lpsppower
+include $(PSPSDK)/lib/build.mak
+
+
+my-clean:
+	rm -f *.o
+	rm -f engine-pc
+

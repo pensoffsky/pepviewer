@@ -1,0 +1,5 @@
+#!/bin/bash
+cp pepv09/EBOOT.PBP /media/disk/PSP/GAME/pepv09
+cp pepv09%/EBOOT.PBP /media/disk/PSP/GAME/pepv09%/
+umount /media/disk
+
