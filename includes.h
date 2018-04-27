@@ -3,7 +3,8 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_mixer.h>
-#include <SDL/sge.h>
+//#include <SDL/sge.h>
+#include "libSGE/sge.h"
 #include <SDL_gfxPrimitives.h>
 #include <SDL_framerate.h>
 
@@ -18,8 +19,8 @@
 	#include <pspkernel.h>
 #endif
 
-#define W 480
-#define H 272
+#define W 1280
+#define H 720
 
 struct ColorAlpha
 {

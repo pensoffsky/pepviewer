@@ -59,7 +59,7 @@ short CStuff::GetThreadInput()
 int CStuff::IsJpeg(std::string filename)
 {
 	//check if the image is a jpeg or something else
-	char *ext = strrchr(filename.c_str(), '.');
+	const char *ext = strrchr(filename.c_str(), '.');
  	if(!ext)
  		return 0;
 	char jpegList[4][7] = { {".jpg\0"},{".JPG\0"},{".jpeg\0"},{".JPEG\0"} };
@@ -77,7 +77,7 @@ int CStuff::IsJpeg(std::string filename)
 int CStuff::IsPng(std::string filename)
 {
 	//check if the image is a jpeg or something else
-	char *ext = strrchr(filename.c_str(), '.');
+	const char *ext = strrchr(filename.c_str(), '.');
  	if(!ext)
  		return 0;
 	char jpegList[2][7] = { {".png\0"},{".PNG\0"} };

@@ -280,7 +280,7 @@ bool CFilebrowser::ReadFiletypes(){
 short CFilebrowser::CheckSuffix(std::string filename)
 {
 	short i = 0;
-	char *ext = strrchr(filename.c_str(), '.');
+	const char *ext = strrchr(filename.c_str(), '.');
 	if(!ext)
 		return 0;
 

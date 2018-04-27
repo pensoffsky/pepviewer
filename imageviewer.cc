@@ -25,8 +25,8 @@ ImageViewer::ImageViewer()
 	original_loaded = 0;
 	ausschnitt.x = 0;
 	ausschnitt.y = 0;
-	ausschnitt.w = 480;
-	ausschnitt.h = 272;
+	ausschnitt.w = W;
+	ausschnitt.h = H;
 	
 	zoomstate = 0;
 	zwx = W / 2;

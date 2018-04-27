@@ -617,7 +617,7 @@ void CMain::Loop()
 {
 	FPSmanager *frames = new FPSmanager();
  	SDL_initFramerate(frames);
- 	SDL_setFramerate(frames, 30);
+ 	SDL_setFramerate(frames, 60);
 
 	#ifdef PSP
 	switch(config->GetCpuspeed()) 
